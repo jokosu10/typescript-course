@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "rm -rf build/ && tsc",
     "watch": "rm -rf build/ && tsc -w",
-    "dev": "nodemon ./build/index.js"
+    "dev": "nodemon ./build/TypeDasar.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
