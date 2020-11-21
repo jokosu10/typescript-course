@@ -10,3 +10,9 @@ age = 17;
 var isMarried;
 isMarried = false;
 isMarried = true;
+// Type variable any
+var heroes = "Iron man";
+heroes = 17;
+heroes = [];
+heroes = {};
+heroes = true || false || "string";

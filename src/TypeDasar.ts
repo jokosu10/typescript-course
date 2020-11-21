@@ -11,3 +11,10 @@ age = 17;
 let isMarried: Boolean;
 isMarried = false;
 isMarried = true;
+
+// Type variable any
+let heroes: any = "Iron man";
+heroes = 17;
+heroes = [];
+heroes = {};
+heroes = true || false || "string";
