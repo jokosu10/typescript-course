@@ -29,3 +29,18 @@ type Tambah = (val1: number, val2: number) => number;
 const Add: Tambah = (val1: number, val2: number): number => {
 	return val1 + val2;
 }
+
+// default parameter in function
+const FullName = (first: string, last: string = "Susilo"): string => {
+	return first + " " + last;
+}
+
+console.log(FullName("Joko"));
+
+// optional parameter in function
+const GetUmur = (val1: number, val2?: number): string => {
+	return val1 + " " + val2;
+	// return val1 + " " + val2;
+}
+
+console.log(GetUmur(1, 133));

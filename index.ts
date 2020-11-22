@@ -1,1 +1,1 @@
-console.log("Hello sempak World")
+console.log("Hello World")

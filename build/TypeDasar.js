@@ -16,3 +16,7 @@ heroes = 17;
 heroes = [];
 heroes = {};
 heroes = true || false || "string";
+// union type
+var phone;
+phone = 621234567;
+phone = "083854";
