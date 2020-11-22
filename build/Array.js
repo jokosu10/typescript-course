@@ -11,6 +11,6 @@ array3 = [1, "string", {}, true, "123456", "asiap"];
 // array tupples
 var biodata;
 biodata = ["Surabaya", 4];
-biodata = ["Malang", true];
-biodata = ["Sidoarjo", 3, false];
-biodata = [10, "Tegal"];
+// biodata = ["Malang", true];
+// biodata = ["Sidoarjo", 3, false];
+// biodata = [10, "Tegal"];

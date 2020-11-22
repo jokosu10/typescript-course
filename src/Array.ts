@@ -13,6 +13,6 @@ array3 = [1, "string", {}, true, "123456", "asiap"];
 // array tupples
 let biodata: [string, number];
 biodata = ["Surabaya", 4];
-biodata = ["Malang", true];
-biodata = ["Sidoarjo", 3, false];
-biodata = [10, "Tegal"];
+// biodata = ["Malang", true];
+// biodata = ["Sidoarjo", 3, false];
+// biodata = [10, "Tegal"];
