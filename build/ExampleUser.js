@@ -39,6 +39,9 @@ var Admin = /** @class */ (function (_super) {
         _this.phone = phone;
         return _this;
     }
+    Admin.getNameRole = function () {
+        return "Hey";
+    };
     Admin.prototype.getRole = function () {
         return {
             read: this.read,
@@ -61,11 +64,16 @@ var Admin = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    Admin.getRoleName = "Admin";
     return Admin;
 }(User));
-var AdminUser = new Admin("083842423432", "jokosu10", 27);
-AdminUser.getRole();
-AdminUser.phone;
-AdminUser.email = "a@jokosu10.my.id";
-console.log(AdminUser.email);
+// let AdminUser = new Admin("083842423432", "jokosu10", 27);
+// AdminUser.getRole();
+// AdminUser.phone;
+// AdminUser.email = "a@jokosu10.my.id";
+// console.log(AdminUser.email)
 // console.log(AdminUser.phone);
+var adminRoleName = Admin.getRoleName;
+var adminNameRole = Admin.getNameRole();
+console.log(adminRoleName);
+console.log(adminNameRole);

@@ -19,10 +19,15 @@ class Admin extends User {
 	write: boolean = true;
 	phone: string;
 	private _email: string = "";
+	static getRoleName: string = "Admin";
 
 	constructor(phone: string, name: string, age: number) {
 		super(name, age);
 		this.phone = phone;
+	}
+
+	static getNameRole() {
+		return "Hey";
 	}
 
 	getRole(): { read: boolean, write: boolean } {
@@ -45,10 +50,15 @@ class Admin extends User {
 	}
 }
 
-let AdminUser = new Admin("083842423432", "jokosu10", 27);
-AdminUser.getRole();
-AdminUser.phone;
+// let AdminUser = new Admin("083842423432", "jokosu10", 27);
+// AdminUser.getRole();
+// AdminUser.phone;
 
-AdminUser.email = "a@jokosu10.my.id";
-console.log(AdminUser.email)
+// AdminUser.email = "a@jokosu10.my.id";
+// console.log(AdminUser.email)
 // console.log(AdminUser.phone);
+
+let adminRoleName = Admin.getRoleName;
+let adminNameRole = Admin.getNameRole()
+console.log(adminRoleName);
+console.log(adminNameRole);
