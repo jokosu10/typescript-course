@@ -31,10 +31,12 @@ var User = /** @class */ (function () {
 exports.User = User;
 var Admin = /** @class */ (function (_super) {
     __extends(Admin, _super);
-    function Admin() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function Admin(phone, name, age) {
+        var _this = _super.call(this, name, age) || this;
         _this.read = true;
         _this.write = true;
+        _this._email = "";
+        _this.phone = phone;
         return _this;
     }
     Admin.prototype.getRole = function () {
@@ -44,6 +46,26 @@ var Admin = /** @class */ (function (_super) {
         };
     };
     ;
+    Object.defineProperty(Admin.prototype, "email", {
+        get: function () {
+            return this._email;
+        },
+        set: function (value) {
+            if (value.length < 5) {
+                this._email = "Email is wrong";
+            }
+            else {
+                this._email = value;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Admin;
 }(User));
-var AdminUser = new Admin("jokosu", 27);
+var AdminUser = new Admin("083842423432", "jokosu10", 27);
+AdminUser.getRole();
+AdminUser.phone;
+AdminUser.email = "a@jokosu10.my.id";
+console.log(AdminUser.email);
+// console.log(AdminUser.phone);

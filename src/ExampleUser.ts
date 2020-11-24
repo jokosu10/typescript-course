@@ -5,7 +5,7 @@ export class User {
 		this.name = name;
 	}
 
-	setName(value: string): void {
+	setName(value: string) {
 		this.name = name;
 	}
 
@@ -18,6 +18,7 @@ class Admin extends User {
 	read: boolean = true;
 	write: boolean = true;
 	phone: string;
+	private _email: string = "";
 
 	constructor(phone: string, name: string, age: number) {
 		super(name, age);
@@ -30,10 +31,24 @@ class Admin extends User {
 			write: this.write
 		};
 	};
+
+	set email(value: string) {
+		if (value.length < 5) {
+			this._email = "Email is wrong";
+		} else {
+			this._email = value;
+		}
+	}
+
+	get email(): string {
+		return this._email;
+	}
 }
 
-let AdminUser = new Admin("083854144912", "jokosu", 27);
-AdminUser.getName();
+let AdminUser = new Admin("083842423432", "jokosu10", 27);
 AdminUser.getRole();
-AdminUser.setName("jokosu");
 AdminUser.phone;
+
+AdminUser.email = "a@jokosu10.my.id";
+console.log(AdminUser.email)
+// console.log(AdminUser.phone);
